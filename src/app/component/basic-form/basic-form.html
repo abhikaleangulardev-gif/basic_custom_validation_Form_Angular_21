@@ -16,6 +16,18 @@
                         @if(myForm.get('username')?.touched && myForm.get('username')?.errors?.['uppercase']){
                         <span class="text-danger">*Username Must Be Uppercase</span>
                         }
+
+                        <input type="text" name="" id="" class="form-control my-3" placeholder="moviename......"
+                            formControlName="moviename">
+
+                        <!-- custom lowercase validation apply with moviename input field -->
+                        @if(myForm.get('moviename')?.touched && myForm.get('moviename')?.errors?.['required']){
+                        <span class="text-danger">*Moviename Is Required</span>
+                        }@else if(myForm.get('moviename')?.touched && myForm.get('moviename')?.errors?.['lowercase']){
+                        <span class="text-danger">*Only lowercase letters are allowed</span>
+                        }
+
+
                         <button type="submit" class="btn btn-success btn-sm my-3 w-100">Submit</button>
                     </form>
                 </div>
