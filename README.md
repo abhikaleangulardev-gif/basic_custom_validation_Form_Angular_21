@@ -65,9 +65,11 @@ For more information on using the Angular CLI, including detailed command refere
 
 <!-- ng g class uppercase --type=validator -->
 
-Uppercase Validator  --> done
+Uppercase Validator ---> done
 
 Lowercase Validator ---> done
+
+titlecase Validator ---> done
 
 Alphabet Only Validator
 

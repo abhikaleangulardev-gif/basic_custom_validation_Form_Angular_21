@@ -7,8 +7,8 @@
                 </div>
                 <div class="card-body">
                     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-                        <input type="text" name="" id="" class="form-control my-2" placeholder="Username......"
-                            formControlName="username">
+                        <input type="text" name="" id="" class="form-control my-2"
+                            placeholder="Username with UpperCase()......" formControlName="username">
                         <!-- custom uppercase validation apply with username input field -->
                         @if(myForm.get('username')?.touched && myForm.get('username')?.errors?.['required']){
                         <span class="text-danger">*Username Is Required</span>
@@ -17,8 +17,8 @@
                         <span class="text-danger">*Username Must Be Uppercase</span>
                         }
 
-                        <input type="text" name="" id="" class="form-control my-3" placeholder="moviename......"
-                            formControlName="moviename">
+                        <input type="text" name="" id="" class="form-control my-3"
+                            placeholder="moviename with LowerCase()......" formControlName="moviename">
 
                         <!-- custom lowercase validation apply with moviename input field -->
                         @if(myForm.get('moviename')?.touched && myForm.get('moviename')?.errors?.['required']){
@@ -27,6 +27,15 @@
                         <span class="text-danger">*Only lowercase letters are allowed</span>
                         }
 
+                        <input type="text" name="" id="" class="form-control my-3"
+                            placeholder="fullname with TitleCase()......" formControlName="fullname">
+
+                        <!-- custom titlecase validation apply with fullname input field -->
+                        @if(myForm.get('fullname')?.touched && myForm.get('fullname')?.errors?.['required']){
+                        <span class="text-danger">*FullName Is Required</span>
+                        }@else if(myForm.get('fullname')?.touched && myForm.get('fullname')?.errors?.['titlecase']){
+                        <span class="text-danger">*Full name must be in title case</span>
+                        }
 
                         <button type="submit" class="btn btn-success btn-sm my-3 w-100">Submit</button>
                     </form>
