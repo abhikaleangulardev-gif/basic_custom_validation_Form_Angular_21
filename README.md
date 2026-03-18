@@ -73,7 +73,7 @@ titlecase Validator ---> done
 
 Alphabet Only Validator ---> const regex = /^[A-Za-z]+$/ and regex.test(value)? null : {alphabetOnly : true }
 
-Alphanumeric Validator  ---> const regex = /^[A-Za-z0-9]+$/ and regex.test(value)? null : { alphanumericOnly : true }
+Alphanumeric Validator  ---> const regex = /^[A-Za-z0-9]+$/ and regex.test(value)? null : { alphanumericOnly : true }  
 
 No Special Characters Validator --> const regex = /^[A-Za-z0-9 ]+$/ and regex.test(value)? null : { noSpecialChars : true }
 

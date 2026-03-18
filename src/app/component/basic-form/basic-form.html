@@ -47,6 +47,16 @@
                             <span class="text-danger">*Only alphabets are allowed</span>
                         }
 
+                         <input type="text" name="" id="" class="form-control my-3"
+                            placeholder="Studentidnumber with Alphanumeric......" formControlName="studentidnumber">
+
+                        <!-- custom Alphanumeric validation apply with subjectname input field -->
+                        @if(myForm.get('studentidnumber')?.touched && myForm.get('studentidnumber')?.errors?.['required']){
+                            <span class="text-danger">*studnet Id Number Is Required</span>
+                        }@else if(myForm.get('studentidnumber')?.touched && myForm.get('studentidnumber')?.errors?.['alphanumeric']){
+                            <span class="text-danger">*Alphanumeric Is Required</span>
+                        }
+
 
                         <button type="submit" class="btn btn-success btn-sm my-3 w-100">Submit</button>
                     </form>
