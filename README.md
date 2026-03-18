@@ -71,17 +71,17 @@ Lowercase Validator ---> done
 
 titlecase Validator ---> done
 
-Alphabet Only Validator
+Alphabet Only Validator ---> const regex = /^[A-Za-z]+$/ and regex.test(value)? null : {alphabetOnly : true }
 
-Alphanumeric Validator
+Alphanumeric Validator  ---> const regex = /^[A-Za-z0-9]+$/ and regex.test(value)? null : { alphanumericOnly : true }
 
-No Special Characters Validator
+No Special Characters Validator --> const regex = /^[A-Za-z0-9 ]+$/ and regex.test(value)? null : { noSpecialChars : true }
 
-Trim Whitespace Validator
+Trim Whitespace Validator ---> return value.trim().length === 0 ? { trimwhitespace : true} : null
 
-No Space Validator
+No Space Validator  ---> value.includes(' ') ? {nospece : true} : null
 
-Min Length Custom Validator
+Min Length Custom Validator ---> 
 
 Max Length Custom Validator
 
