@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Uppercase } from '../../custom-validation-form/uppercase.validator';
 import { LowerCase } from '../../custom-validation-form/lowercase.validator';
 import { TitleCase } from '../../custom-validation-form/titlecase.validator';
+import { AlphabetOnly } from '../../custom-validation-form/alphabetonly.validator';
 
 @Component({
   selector: 'app-basic-form',
@@ -25,6 +26,7 @@ export class BasicForm implements OnInit {
       username: this.fb.control('', [Validators.required, Uppercase.validate]),
       moviename: this.fb.control('', [Validators.required, LowerCase.validate]),
       fullname: this.fb.control('', [Validators.required, TitleCase.validate]),
+      subjectname: this.fb.control('', [Validators.required,AlphabetOnly.validate]),
     })
   }
 
