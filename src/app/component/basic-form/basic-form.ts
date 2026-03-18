@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Uppercase } from '../../custom-validation-form/uppercase.validator';
 import { LowerCase } from '../../custom-validation-form/lowercase.validator';
+import { TitleCase } from '../../custom-validation-form/titlecase.validator';
 
 @Component({
   selector: 'app-basic-form',
@@ -22,7 +23,8 @@ export class BasicForm implements OnInit {
   initialForm() {
     this.myForm = this.fb.group({
       username: this.fb.control('', [Validators.required, Uppercase.validate]),
-      moviename: this.fb.control('', [Validators.required,LowerCase.validate]),
+      moviename: this.fb.control('', [Validators.required, LowerCase.validate]),
+      fullname: this.fb.control('', [Validators.required, TitleCase.validate]),
     })
   }
 
