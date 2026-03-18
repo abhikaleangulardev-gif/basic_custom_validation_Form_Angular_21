@@ -61,6 +61,10 @@ For more information on using the Angular CLI, including detailed command refere
 
 <!-- mulitple custom Validation Name List -->
 
+<!-- shortcut command create in custom validation  -->
+
+<!-- ng g class uppercase --type=validator -->
+
 Uppercase Validator
 
 Lowercase Validator
