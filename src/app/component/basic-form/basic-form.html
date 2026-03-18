@@ -37,6 +37,17 @@
                         <span class="text-danger">*Full name must be in title case</span>
                         }
 
+                         <input type="text" name="" id="" class="form-control my-3"
+                            placeholder="subjectname with Alphabet Only......" formControlName="subjectname">
+
+                        <!-- custom alphabetonly validation apply with subjectname input field -->
+                        @if(myForm.get('subjectname')?.touched && myForm.get('subjectname')?.errors?.['required']){
+                            <span class="text-danger">*Subject Is Required</span>
+                        }@else if(myForm.get('subjectname')?.touched && myForm.get('subjectname')?.errors?.['alphabetOnly']){
+                            <span class="text-danger">*Only alphabets are allowed</span>
+                        }
+
+
                         <button type="submit" class="btn btn-success btn-sm my-3 w-100">Submit</button>
                     </form>
                 </div>
